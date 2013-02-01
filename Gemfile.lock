@@ -53,7 +53,11 @@ GEM
       sass-rails (>= 3.1.1)
     haml (3.1.7)
     hike (1.2.1)
+    httpclient (2.3.2)
     i18n (0.6.1)
+    impressionist (1.1.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
     journey (1.0.4)
     jquery-rails (2.2.0)
       railties (>= 3.0, < 5.0)
@@ -147,6 +151,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  impressionist
   jquery-rails
   rails (= 3.2.11)
   rails_admin

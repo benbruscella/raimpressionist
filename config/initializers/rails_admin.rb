@@ -14,6 +14,30 @@ RailsAdmin.config do |config|
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_user } # auto-generated
 
+
+
+  config.model 'User' do
+    object_label_method do
+      :custom_label_method
+    end
+    list do
+      items_per_page 100
+      field :id
+      field :email
+      field :sign_in_count
+    end
+    edit do
+      exclude_fields :password, :password_confirmation, :reset_password_sent_at, :remember_created_at, :sign_in_count, 
+        :current_sign_in_at,
+        :last_sign_in_at,
+        :current_sign_in_ip,
+        :last_sign_in_ip,
+        :confirmation_token,
+        :confirmed_at,
+        :confirmation_sent_at
+    end
+  end
+
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
 
